@@ -1,7 +1,7 @@
 <?php
 
 header("Content-Type: application/json");
-$productDataPath = _DIR_ . '/../db/products.json';
+$productDataPath = __DIR__ . '/../db/products.json';
 
 function readDataFromDB(){
     global $productDataPath;  

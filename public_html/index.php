@@ -1,2 +1,2 @@
 <?php
-include _DIR_ . '/Kutez-Case/html/main.html';
+include __DIR__ . '/Kutez-Case/html/main.html';
