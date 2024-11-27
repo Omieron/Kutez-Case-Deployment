@@ -1,0 +1,189 @@
+body {
+    margin: 10px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 100px;
+
+    h1 {
+        font-family: 'Avenir-Book';
+        font-size: 45px;
+        font-weight: normal;
+    }
+}
+
+main {
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    width: 100%;
+
+    a {
+        align-content: center;
+        padding-bottom: 200px;
+    }
+
+    a:hover {
+        cursor: pointer;
+    }
+
+    #left_icon {
+        font-size: 200%;
+        margin-left: 30px;
+        color: black;
+    }
+    
+    #right_icon {
+        font-size: 200%;
+        margin-right: 30px;
+        color: black;
+    }
+
+    #container {
+        display: flex;
+        overflow: hidden;
+        width: 90%;  
+        justify-content: space-between; 
+        transition: transform 0.5s ease-in-out;
+        padding: 0 10px;  
+        scroll-snap-type: x mandatory;
+        scroll-padding: 0 24px;
+        /*Scroll Bar*/
+        overflow-x: auto;
+        scroll-behavior: smooth;
+        white-space: nowrap;
+    }
+
+    #container::-webkit-scrollbar {
+        height: 12px;
+    }
+    
+    #container::-webkit-scrollbar-track {
+        background: #999;
+        border-radius: 4px;
+      }
+    
+    #container::-webkit-scrollbar-thumb {
+        background: #666;
+        border-radius: 4px;
+    }
+    
+    #container::-webkit-scrollbar-thumb:hover {
+        background: #999;
+    }
+
+}
+
+.product {
+    flex: 0 0 23%; 
+    margin: 0 0px;
+    padding: 15px;
+
+    .imgBox {
+        width: 250px;
+        height: 250px;
+        overflow: hidden;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 8%;
+        }
+    }
+
+    .title p {
+        font-family: 'Montserrat-Medium';
+        font-size: 15px;
+    }
+
+    .price p {
+        font-family: 'Montserrat-Regular';
+        font-size: 15px;
+    }
+
+    .colorsButton .colorRadioGroup {
+        display: flex;
+    }
+
+    .colorsButton .colorRadioGroup input[type="radio"] {
+        appearance: none;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        padding: 10px;
+        cursor: pointer;
+        outline: none;
+        display: inline-block;
+        border: 3px solid white;
+    }
+
+    .colorsButton .colorRadioGroup input[type="radio"]:checked {
+        box-shadow: 0 0 0 1px black;
+    }
+
+    .colorsButton .yellow_gold {
+        background-color: #E6CA97;
+    }
+
+    .colorsButton .white_gold {
+        background-color: #D9D9D9;
+    }
+
+    .colorsButton .rose_gold {
+        background-color: #E1A4A9;
+    }
+
+    .colorRadioGroupName p {
+        font-family: 'Avenir-Book';
+        font-size: 12px;
+    }
+
+    .rating p {
+        font-family: 'Avenir-Book';
+        font-size: 14px;
+    }
+}
+
+.fa-star {
+    font-size: 14px; 
+    margin-right: 5px;  
+}
+
+.fa-star.full {
+    color: #FFCC99; 
+}
+
+.fa-star.half {
+    background: linear-gradient(to right, #FFCC99 50%, #D9D9D9 50%);
+    -webkit-background-clip: text; 
+    background-clip: text; 
+    -webkit-text-fill-color: transparent; 
+    text-fill-color: transparent;
+}
+
+.fa-star.empty {
+    color: #D9D9D9; 
+}
+
+
+/* Responsive Screen */
+
+@media (max-width: 1400px) {
+    .product {
+        flex: 0 0 30%; /* 3 product */
+    }
+}
+
+@media (max-width: 1150px) {
+    .product {
+        flex: 0 0 45%; /* 2 product */
+    }
+}
+
+@media (max-width: 800px) {
+    .product {
+        flex: 0 0 90%; /* 1 product */
+    }
+}
